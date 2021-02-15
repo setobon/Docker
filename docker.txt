@@ -5,3 +5,14 @@ Azure Devops -> Container Registry
 AWS -> Amazon Elastic Container Registry
 IBM -> IBM Cloud Container Registry
 VMWare -> Container Registry
+
+Alpine libraries
+
+Apache Tomcat - Alpine
+tomcat:jre8-alpine -> https://hub.docker.com/layers/tomcat/library/tomcat/jre8-alpine/images/sha256-8b8b1eb786b54145731e1cd36e1de208d10defdbb0b707617c3e7ddb9d6d99c8?context=explore
+
+PHP - Alpine
+php:cli-alpine3.13 ->  https://hub.docker.com/layers/php/library/php/cli-alpine3.13/images/sha256-bdc9e7c986872d7ad2a987cc813562c4732605a870f8246fe29eb0b34768bab4?context=explore
+
+Node - Alpine
+node:lts-alpine3.13 -> https://hub.docker.com/layers/node/library/node/lts-alpine3.13/images/sha256-ca018e893edb8ab5d630740751e53c142895fec23fadd8ce19422f82a6bc0d8f?context=explore
