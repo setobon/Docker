@@ -1,0 +1,7 @@
+Registry para cada proveedor cloud.
+
+Google Cloud -> Container Registry
+Azure Devops -> Container Registry
+AWS -> Amazon Elastic Container Registry
+IBM -> IBM Cloud Container Registry
+VMWare -> Container Registry
