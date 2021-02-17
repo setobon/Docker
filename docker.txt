@@ -16,3 +16,53 @@ php:cli-alpine3.13 ->  https://hub.docker.com/layers/php/library/php/cli-alpine3
 
 Node - Alpine
 node:lts-alpine3.13 -> https://hub.docker.com/layers/node/library/node/lts-alpine3.13/images/sha256-ca018e893edb8ab5d630740751e53c142895fec23fadd8ce19422f82a6bc0d8f?context=explore
+
+
+Docker
+
+Comandos docker
+
+1. Se crea imagen desde Dockerfile
+ docker build -t person:1.0.0 .
+
+2. Se descarga imagen mysql
+ docker pull mysql:5.7
+
+3. Se inicia el contenedor de mysql
+ docker run --name mysql-standalone -e MYSQL_ROOT_PASSWORD=270513 -e MYSQL_USER=sergio -e MYSQL_PASSWORD=DoOLTtyHpSLq -e MYSQL_DATABASE=personalsoft -d mysql:5.7
+
+4. Se arranca el contenedor persons y se linkea con mysql
+ docker run -p 8089:8089 --name persons --link mysql-standalone:mysql person:8.0.0
+ 
+ 
+pushear imagen: 
+
+1. docker login  
+2. docker tag person:8.0.0 setobon0711/persons:8.0.0 
+3. docker push setobon0711/persons:8.0.0
+
+
+Limites de CPU: 
+
+docker run -it --cpuset-cpus=0-3 ubuntu bash
+
+
+Visualizar estadísticas contenedores
+
+-> docker stats --all --format "table [{{.Container}}] {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"
+
+Limites de memoria: 
+
+-> docker run -it --memory="500m" ubuntu bash
+
+
+Recomendaciones:
+
+Limitar a solo aceptar imágenes confiables
+export DOCKER_CONTENT_TRUST=1
+
+Swarm
+-> Por cada servicio un solo jar
+
+
+
